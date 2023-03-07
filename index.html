@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boeing Vending</title>
+    <link rel="icon" href="https://i0.wp.com/logotaglines.com/wp-content/uploads/2019/10/Boeing-Logo-Taglne-Slogan.jpg?fit=397%2C397&ssl=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+  
+    <script>
+  function sendEmail(event) {
+          event.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const bdate = document.getElementById("bdate").value;
+        const type = document.getElementById("type").value;
+        const machineId = document.getElementById("machineId").value;
+        const clean = document.getElementById("clean").value;
+        const issues = document.getElementById("issues").value;
+        const satisfied = document.getElementById("satisfied").value;
+        const comments = document.getElementById("comments").value;
+    
+        const mailtoLink = "mailto:heather.a.anderson@boeing.com;geoffrey.b.moylan@boeing.com;Wendy.M.Maynard@boeing.com;Walsh-Gene@aramark.com"
+          + "?subject=Boeing%20Vending%20Feedback%20Survey"
+          + "&body=Name: " + name
+          + "%0AEmail: " + email
+          + "%0ADate: " + bdate
+          + "%0AVending or MicroMarket: " + type
+          + "%0AMachine ID: " + machineId
+          + "%0AClean and stocked: " + clean
+          + "%0APayment or product issues: " + issues
+          + "%0ASatisfied: " + satisfied
+          + "%0AComments: " + comments;
+    
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="testbox">
+      <form onsubmit="sendEmail(event)">
+        <div class="banner">
+          <h1>Boeing Vending Feedback Survey</h1>
+        </div>
+        <br>
+        <div class="item">
+          <label for="name">Name<span>*</span></label>
+          <input id="name" type="text" name="name" required/>
+        </div>
+        <div class="item">
+          <label for="email">Email<span></span></label>
+          <input id="email" type="text" name="email"/>
+        </div>
+        <div class="item">
+          <label for="bdate">Date<span>*</span></label>
+          <input id="bdate" type="date" name="bdate" required/>
+          <i class="fas fa-calendar-alt"></i>
+        <div class="item">
+          <label for="type">Vending or MicroMarket? <span> *</span></label>
+          <br>
+          <select id="type">
+            <option value="">--Select--</option>
+            <option value="vending">Vending</option>
+            <option value="micromarket">Micromarket</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="machineId">Machine ID<span>*</span></label>
+          <input id="machineId" type="text" name="name" required/>
+        </div>
+        <div class="item">
+          <label for="clean">Was the Vending/Market clean and stocked?<span> </span></label>
+          <br>
+          <select id="clean">
+            <option value="">--Select--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="issues">Were you able to complete your purchase without payment or product issues?<span> </span></label>
+          <br>
+          <select id="issues">
+            <option value="">--Select--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="satisfied">Are you satisfied with your experience?<span> </span></label>
+          <br>
+          <select id="satisfied">
+            <option value="">--Select--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="item">
+          <label for="comments">Comments<span></span></label>
+          <input id="comments" type="textbox" name="name"/>
+        </div>
+          <div class="btn-block">
+            <button type="submit" >EMAIL FEEDBACK</button>
+          </div>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>
