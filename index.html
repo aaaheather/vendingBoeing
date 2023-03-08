@@ -20,7 +20,7 @@
         const satisfied = document.getElementById("satisfied").value;
         const comments = document.getElementById("comments").value;
     
-        const mailtoLink = "mailto:heather.a.anderson@boeing.com;geoffrey.b.moylan@boeing.com;Wendy.M.Maynard@boeing.com;Walsh-Gene@aramark.com"
+        const mailtoLink = "mailto:heather.a.anderson@boeing.com;geoffrey.b.moylan@boeing.com;Wendy.M.Maynard@boeing.com;Walsh-Gene@aramark.com;" + document.getElementById('email').value;
           + "?subject=Boeing%20Vending%20Feedback%20Survey"
           + "&body=Name: " + name
           + "%0AEmail: " + email
@@ -33,6 +33,7 @@
           + "%0AComments: " + comments;
     
         window.location.href = mailtoLink;
+        alert("Thank you for submitting feedback! Please continue to send the email and check for a confimation in your inbox!");
       }
     </script>
   </head>
@@ -40,7 +41,7 @@
     <div class="testbox">
       <form onsubmit="sendEmail(event)">
         <div class="banner">
-          <h1>Boeing Vending Feedback Survey</h1>
+          <h1>Boeing Vending and Micromarket Feedback Survey</h1>
         </div>
         <br>
         <div class="item">
@@ -65,7 +66,7 @@
           </select>
         </div>
         <div class="item">
-          <label for="machineId">Machine ID<span>*</span></label>
+          <label for="machineId">Machine Building and Floor<span>*</span></label>
           <input id="machineId" type="text" name="name" required/>
         </div>
         <div class="item">
