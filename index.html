@@ -8,8 +8,8 @@
     <link href="styles.css" rel="stylesheet" type="text/css">
   
     <script>
-  function sendEmail(event) {
-          event.preventDefault();
+      function sendEmail(event) {
+        event.preventDefault();
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const bdate = document.getElementById("bdate").value;
@@ -20,17 +20,17 @@
         const satisfied = document.getElementById("satisfied").value;
         const comments = document.getElementById("comments").value;
     
-        const mailtoLink = "mailto:heather.a.anderson@boeing.com;geoffrey.b.moylan@boeing.com;Wendy.M.Maynard@boeing.com;Walsh-Gene@aramark.com;" + document.getElementById('email').value;
-          + "?subject=Boeing%20Vending%20Feedback%20Survey"
-          + "&body=Name: " + name
-          + "%0AEmail: " + email
-          + "%0ADate: " + bdate
-          + "%0AVending or MicroMarket: " + type
-          + "%0AMachine ID: " + machineId
-          + "%0AClean and stocked: " + clean
-          + "%0APayment or product issues: " + issues
-          + "%0ASatisfied: " + satisfied
-          + "%0AComments: " + comments;
+        const mailtoLink = "mailto:heather.a.anderson@boeing.com;geoffrey.b.moylan@boeing.com;Wendy.M.Maynard@boeing.com;Walsh-Gene@aramark.com;" + document.getElementById('email').value +
+          "?subject=Boeing%20Vending%20Feedback%20Survey" +
+          "&body=Name: " + name +
+          "%0AEmail: " + email +
+          "%0ADate: " + bdate +
+          "%0AVending or MicroMarket: " + type +
+          "%0AMachine ID: " + machineId +
+          "%0AClean and stocked: " + clean +
+          "%0APayment or product issues: " + issues +
+          "%0ASatisfied: " + satisfied +
+          "%0AComments: " + comments;
     
         window.location.href = mailtoLink;
         alert("Thank you for submitting feedback! Please continue to send the email and check for a confimation in your inbox!");
